@@ -11,4 +11,6 @@ This repository contains 2 apps.
 
 `react-redux-final` is the same application, using the Redux library for state management. Examine the App component. Notice how it has become a stateless component?
 
+In this lesson, we will start from `react-redux-start` and see how the architecture of a pure React app can be transformed into a React-Redux one.
+
 For a brief reference or description of the various moving parts of Redux, read the comments in the respective files in the Redux folder.
