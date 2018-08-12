@@ -11,6 +11,7 @@ app.use(express.urlencoded({extended: true}));
 // If we are in a development environment, load up the webpack middleware as well.
 // If we are in production, it means that the js files have been built and placed in the static folder, so webpack/babel is no longer needed.
 if (!process.env.NODE_ENV || process.env.NODE_ENV == 'development' || !fs.existsSync('./public/bundle.js')) {
+    console.log('Server mode: Development');
     const webpack = require('webpack');
     const webpackDevMiddleware = require('webpack-dev-middleware');
     const webpackHotMiddleware = require('webpack-hot-middleware');
@@ -21,6 +22,8 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV == 'development' || !fs.exists
         publicPath: webpackConfig.output.publicPath
     }));
     app.use(webpackHotMiddleware(compiler));
+} else {
+    console.log('Server mode: Production');
 }
 
 app.get('/api/v1', (req, res) => {
