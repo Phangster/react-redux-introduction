@@ -1,0 +1,7 @@
+const paragraphs = [
+        "This is a simplified TVMaze-React solution. Examine the SearchBar and SearchResultContainer components. They are at the same level in the hierarchy of components, i.e. they are both children of the App component. Hence, to pass the search results from SearchBar to SearchResultContainer to hydrate the latter, we have to create a lifting function called handleSearchResults in the App component, which is passed down as a callback prop to the SearchBar component. This function lifts the results returned by the AJAX call in SearchBar back into the App component, then changes the state of the App component with those results. Only after that will the SearchResultContainer component receive this data, i.e. via the App component's state. This props drilling and state lifting gets really old really fast when you have a more complex app.",
+
+        "Instead, we are going to use a state management library to extract information from components directly into the application state and dispatch that information directly to whichever component requires it. We will use Redux for this introduction, but it is important to note that Redux is framework agnostic, and there are also other libraries that handle application states, e.g. Flux and MobX."
+    ]
+
+export default paragraphs;

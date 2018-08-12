@@ -1,0 +1,15 @@
+{
+    "users": [
+        {
+            "name": "test",
+            "password": "test",
+            "email": "test@test.com"
+        }
+    ],
+    "cats": [
+        {
+            "name": "kitteh",
+            "url": "https://picsum.photos/200/300/?random"
+        }
+    ]
+}
